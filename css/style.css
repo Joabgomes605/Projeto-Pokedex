@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0; 
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5db13;
+  box-shadow: 0px 3px 21px -5px rgba(0,0,0,0.75);
+  padding: 10px;
+  z-index: 1;
+}
+header img{
+  width: 128px;
+}
+header nav a{
+  padding: 7px 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+}
+header nav a:hover{
+  background-color: #73D677;
+}
+main{
+  background: linear-gradient(#F5DB13, #F2B807);
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 60px;
+}
+main div h1{
+  font-weight: normal;
+}
+main div a{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #73D677;
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7px 0px #5eaf62;
+}
+main div a:hover{
+  color: #fff;
+  background-color:#5eaf62;
+}
+
+.pokebola{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 64px;
+  height: 64px;
+  transition: width 1.0s, heigth 0.5s;
+  animation-name: pokebola;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes pokebola {
+  0%{
+    transform: translateY(-300px);
+    opacity: 0%;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 100%;
+  }
+  80%{
+    transform: translateY(-32px);
+  }
+}
+
+.pokebola:hover{
+  width: 100px;
+  height: 100px;
+}
+.pokebola img{
+  width: 100%;
+}
